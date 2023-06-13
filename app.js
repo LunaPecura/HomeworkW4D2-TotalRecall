@@ -138,3 +138,152 @@ for (let i=10; i<=400; i++) { console.log(i); }
 
 // Write a loop that will print out every third number starting with 12 and going no higher than 4000
 for (let i=12; i<=4000; i+=3) { console.log(i); }
+
+
+
+/* II.B ***************************************************************************************/
+
+// Print out the numbers that are within the range of 1 - 100
+for(let i=1; i<=100; i++) { console.log(i); }
+
+// Adjust your code to add a message next to even numbers only that says: "<-- is an even number"
+for(let i=1; i<=100; i++) {
+  if(i % 2 === 0) { console.log(i + " <-- is an even number"); }
+  else { console.log(i); }
+}
+
+
+
+/* II.C ***************************************************************************************/
+
+// For the numbers 0 - 100, print out "I found a number. High five!" if the number is a multiple of five
+for (let i=0; i<=100; i+=5) { console.log("I found a " + i + ". High five!"); }
+
+// Add to the code from above to print out "I found a number. Three is a crowd" 
+// if the number is a multiple of three.
+// For numbers divisible by both three and five, be sure your code prints both messages
+for (let i=0; i<=100; i++) { 
+  if (i % 5 === 0) { console.log("I found a " + i + ". High five!"); } 
+  if (i % 3 === 0) { console.log("I found a " + i + ". Three is a crowd."); }
+}
+
+
+
+/* II.D ***************************************************************************************/
+
+// Write code that will save the sum of all the numbers between 1 - 10 to a variable 
+// called bank_account. Check your work! Your bank_account should have $55 in it.
+let bank_account = 0;
+for (let i=1; i<=10; i++) { bank_account += i; }
+console.log(bank_account);
+
+// You got a bonus! Your pay is now doubled each week. Write code that will save the sum 
+// of all the numbers between 1 - 100 multiplied by 2.
+// Check your work! Your bank_account should have $10,100 in it.
+bank_account = 0;
+for (let i=1; i<=100; i++) { bank_account += 2*i; }
+console.log(bank_account);
+
+
+
+/* III.A **************************************************************************************/
+
+// What are the things in an array called?
+// ==> elements
+
+// Do Arrays guarantee those things will be in order?
+// ==> Yes, if you consider the indices the "order".
+
+// What real-life thing could you model with an array?
+// ==> days of the year
+
+
+
+/* III.B **************************************************************************************/
+
+// Create an array that contains three quotes and store it in a variable called quotes
+let quotes = ["This is the first quote.", "This is the second quote", "This is the third quote."];
+console.log(quotes);
+
+
+
+/* III.C **************************************************************************************/
+
+// Given the following array const randomThings = [1, 10, "Hello", true]
+const randomThings = [1, 10, "Hello", true];
+
+// How do you access the 1st element in the array?
+console.log(randomThings[0]);
+
+// Change the value of "Hello" to "World"
+randomThings[2] = "World";
+
+// Check the value of the array to make sure it updated the array. 
+console.log(randomThings);
+
+
+
+/* III.D **************************************************************************************/
+
+// Given the following array 
+const ourClass = ["Salty", "Zoom", "Sardine", "Slack", "Github"];
+
+// What would you write to access the 3rd element of the array?
+console.log(ourClass[2]);
+
+// Change the value of "Github" to "Octocat"
+ourClass[4] = "Octocat";
+
+// Add a new element, "Cloud City" to the array
+ourClass.push("Cloud City");
+console.log(ourClass);
+
+
+
+/* III.D **************************************************************************************/
+
+// Given the following array: 
+const myArray = [5, 10, 500, 20];
+console.log(myArray);
+
+// Add the string "Aegon" to the end of the array. 
+myArray.push("Aegon");
+console.log(myArray);
+
+// Add another string of your choice to the end of the array.
+myArray.push("a string of my choice");
+console.log(myArray);
+
+// Remove the 5 from the beginning of the array.
+myArray.shift();
+console.log(myArray);
+
+// Add the string "Bob Marley" to the beginning of the array.
+myArray.unshift("Bob Marley");
+console.log(myArray);
+
+// Remove the string of your choice from the end of the array.
+myArray.pop();
+console.log(myArray);
+
+// Reverse this array using Array.prototype.reverse().
+myArray.reverse();
+console.log(myArray);
+
+// Did you mutate the array? 
+// ==> yes
+
+// What does mutate mean? 
+// ==> changing the content of a variable
+
+// Did the .reverse() method return anything?
+// ==> yes, it returns a reference to the array that had just been reversed
+
+
+
+
+
+
+
+
+
