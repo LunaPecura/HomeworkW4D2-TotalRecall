@@ -240,7 +240,7 @@ console.log(ourClass);
 
 
 
-/* III.D **************************************************************************************/
+/* III.E **************************************************************************************/
 
 // Given the following array: 
 const myArray = [5, 10, 500, 20];
@@ -281,7 +281,172 @@ console.log(myArray);
 
 
 
+/* III.F ***************************************************************************************/
 
+// Create a variable that contains an integer.
+let intVar = 99;
+
+// Write an if ... else statement that:
+// ... console.log()s "little number" if the number is entered is less than 100
+if (intVar < 100) { console.log("little number"); }
+
+// ... console.log()s big number if the number is greater than or equal to 100.
+else { console.log("big number"); }
+
+
+
+/* III.G ***************************************************************************************/
+
+// Write an if ... else if ... else statement:
+// console.log() little number if the number entered is less than 5.
+if (intVar < 5) { console.log("little number"); }
+
+// If the number entered is more than 10, log big number.
+else if (intVar > 10) { console.log("big number"); }
+
+// Otherwise, log "monkey".
+else { console.log("monkey"); }
+
+
+
+/* III.H ***************************************************************************************/
+
+const kristynsCloset = [
+  "left shoe",
+  "cowboy boots",
+  "right sock",
+  "Per Scholas hoodie",
+  "green pants",
+  "yellow knit hat",
+  "marshmallow peeps"
+];
+
+// Thom's closet is more complicated. Check out this nested data structure!!
+const thomsCloset = [
+  [
+    // These are Thom's shirts
+    "grey button-up",
+    "dark grey button-up",
+    "light blue button-up",
+    "blue button-up",
+  ],[
+    // These are Thom's pants
+    "grey jeans",
+    "jeans",
+    "PJs"
+  ],[
+    // Thom's accessories
+    "wool mittens",
+    "wool scarf",
+    "raybans"
+  ]
+];
+
+// What's Kristyn wearing today? (third item) 
+console.log("Kristyn is rocking that " + kristynsCloset[2] + " today!");
+
+// Kristyn just bought some sweet shades! Add "raybans" to her closet after "yellow knit hat".
+kristynsCloset.splice(6, 0, "raybans");
+console.log(kristynsCloset);
+
+// Kristyn spilled coffee on her hat... modify this item to read "stained knit hat"
+kristynsCloset[5] = "stained knit hat";
+console.log(kristynsCloset);
+
+// Put together an outfit for Thom! (...) access the first element in Thom's shirtsarray.
+let thomsShirt = thomsCloset[0][0];
+
+// In the same way, access one item from Thom's pants array.
+let thomsPants = thomsCloset[1][0];
+
+// Access one item from Thom's accessories array.
+let thomsAcc = thomsCloset[2][0];
+
+// Log a sentence about what Thom's wearing. 
+console.log("Thom is looking fierce in a " + thomsShirt +
+  ", " + thomsPants + " and " + thomsAcc + "!");
+
+// Get more specific about what kind of PJs Thom's wearing this winter. 
+// Modify the name of his PJ pants to Footie Pajamas.
+thomsCloset[1][2] = "Footie Pajamas";
+console.log(thomsCloset);
+
+
+
+/* IV.A ***************************************************************************************/
+
+// skipping this according to instructions 
+
+
+
+/* IV.B ***************************************************************************************/
+
+// Write a function printCool that accepts one parameter, name as an argument.
+// The function should print the name and a message saying that that person is cool.
+
+const printCool = (name) => {
+  console.log(name + " is cool!");
+}
+printCool("Meister Eckhart");
+
+
+
+/* IV.C ***************************************************************************************/
+
+// Write a function calculateCube that takes a single number and prints 
+// the volume of a cube made from that number.
+const calculateCube = (side) => {
+  console.log("Volume of a cube with side length " + side + ": " + side*side*side);
+}
+calculateCube(4);
+
+
+
+/* IV.D ***************************************************************************************/
+
+// already did that one for the last JS lab homework!
+
+
+
+/* IV.E ***************************************************************************************/
+
+// Write a function getTwoLengths that accepts two parameters (strings). 
+// ... return an array of numbers where each number is the length of the corresponding string.
+const getTwoLengths = (str1, str2) => {
+  return [str1, str2].map(str => str.length);
+}
+console.log(getTwoLengths("Good", "Morning"));
+
+
+
+/* IV.F ***************************************************************************************/
+
+// Write a function getMultipleLengths that accepts a single parameter as an argument: an array of strings.
+// ... return an array of numbers where each number is the length of the corresponding string.
+const getMultipleLengths = (arrayOfStrings) => {
+  return arrayOfStrings.map(str => str.length);
+}
+console.log(getMultipleLengths(["Guten", "Morgen", "liebe", "Sorgen", "seid", "ihr", "auch", "schon", "alle", "da", "?"]));
+
+
+
+/* IV.G ***************************************************************************************/
+
+// already did that one for the last JS lab homework!
+
+
+
+/* IV.G ***************************************************************************************/
+// this one looks familiar too, but I'm not 100% sure, so I'll do it anyway
+
+// Write a function printLongestWord that accepts a single argument, an array of strings. 
+// The method should return the longest word in the array. 
+// In case of a tie, the method should return the word that appears first in the array.
+const printLongestWord = (arrayOfStrings) => {
+  let maxLength = arrayOfStrings.map(str => str.length).reduce((a,b) => Math.max(a,b));
+  return arrayOfStrings.find(str => str.length === maxLength);
+}
+console.log(printLongestWord(["Guten", "Morgen", "liebe", "Sorgen"]));
 
 
 
